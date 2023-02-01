@@ -1,0 +1,26 @@
+name: node-firebase-middleman
+proxy:
+  appserver:
+    - firebasemm.lndo.site
+  phpmyadmin:
+    - pma.firebasemm.lndo.site
+services:
+  appserver:
+    type: node:16
+    ssl: true
+    install_dependencies_as_me:
+      - yarn
+  database:
+    type: mysql:8.0
+  phpmyadmin:
+    type: phpmyadmin
+    ssl: true
+    hosts:
+      - database
+tooling:
+  node:
+    service: appserver
+  npm:
+    service: appserver
+  yarn:
+    service: appserver

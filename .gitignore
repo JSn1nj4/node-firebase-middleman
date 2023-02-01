@@ -1,3 +1,7 @@
+# IDE configs
+.idea/
+.vscode/
+
 # Logs
 logs
 *.log
@@ -102,3 +106,7 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Firebase config files
+config/*-adminsdk-*.json
+!config/sample-firebase-adminsdk-config-file.json
